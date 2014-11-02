@@ -23,5 +23,8 @@
   "homepage": "https://github.com/quarterto/traceur-annotations",
   "dependencies": {
     "traceur": "0.0.72"
+  },
+  "devDependencies": {
+    "sug": "^0.2.0"
   }
 }
