@@ -1,0 +1,27 @@
+{
+  "name": "traceur-annotations",
+  "version": "1.0.0",
+  "description": "A shim for Traceur's experimental annotations",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quarterto/traceur-annotations.git"
+  },
+  "keywords": [
+    "annotations",
+    "es6",
+    "traceur"
+  ],
+  "author": "Matt Brennan <mwrbrennan@gmail.com> (http://blog.153.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quarterto/traceur-annotations/issues"
+  },
+  "homepage": "https://github.com/quarterto/traceur-annotations",
+  "dependencies": {
+    "traceur": "0.0.72"
+  }
+}
