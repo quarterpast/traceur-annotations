@@ -57,13 +57,8 @@ Annotation.extend = function (proto = {}) {
 		}
 	};
 	Object.assign(sub.prototype, proto);
-	Object.assign(sub, Annotation);
 	return sub;
 };
-```
-
-module.exports
-
-```js
-export default Annotation;
+ 
+module.exports = Annotation;
 ```
