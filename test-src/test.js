@@ -111,5 +111,44 @@ exports["Annotation tests"] = {
 				}
 			}
 		}
+	},
+
+	"as annotation": {
+		"should instantiate the class"() {
+			var Foo = Annotation.extend({
+				init: sinon.spy()
+			});
+			@Foo function o() {};
+			o.annotations;
+			expect(Foo.prototype.init).was.calledOnce();
+		},
+
+		"should add annotations to its arg"() {
+			var Foo = Annotation.extend();
+			@Foo function o() {};
+			expect(o).to.have.property('annotations');
+		},
+
+		"should support args"() {
+			var Foo = Annotation.extend();
+			
+			@Foo('a', 'b') function o() {};
+			expect(o).to.have.property('annotations');
+		},
+
+		"should pass the rest of the args to init"() {
+			var Foo = Annotation.extend({
+				init: sinon.spy()
+			});
+			@Foo('a', 'b') function o() {};
+			o.annotations;
+			expect(Foo.prototype.init).was.calledWithExactly('a', 'b');
+		},
+
+		"adds instance to annotations"() {
+			var Foo = Annotation.extend();
+			@Foo function o() {};
+			expect(o.annotations[0]).to.be.a(Foo);
+		}
 	}
 };

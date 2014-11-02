@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 PATH  := $(shell npm bin):$(PATH)
-TRACEUR_OPTS = --modules commonjs
+TRACEUR_OPTS = --experimental --modules commonjs
 TEST_SRC = $(wildcard test-src/*)
 TEST_FILES := $(patsubst test-src/%,test-lib/%,$(TEST_SRC))
 
