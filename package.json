@@ -25,6 +25,10 @@
     "traceur": "0.0.72"
   },
   "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.0.1",
+    "sinon": "^1.11.1",
+    "sinon-expect": "^0.2.0",
     "sug": "^0.2.0"
   }
 }
